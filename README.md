@@ -6,3 +6,4 @@ It Was Supposed To Use <p align="center">
     <img src="https://skillicons.dev/icons?i=nginx," />
   </a>
 </p>
+Nginx

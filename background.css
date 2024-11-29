@@ -7,3 +7,37 @@ body {
     background-size: 20px 20px; /* Must be a square */
     background-position: 0 0, 10px 0, 10px -10px, 0px 10px; /* Must be half of one side of the square */
 }
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+head {
+  color: aliceblue;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.animatefade {
+  animation: normal;
+  animation-name: fadein;
+  animation-timing-function: ease-in;
+  opacity: 0;
+}
+
+@keyframes fadein {
+  from{
+  width: 0%;
+  opacity: 0%;
+  text-align: right;
+}
+  to {
+    width: 100%;
+    opacity: 100%;
+    text-align: center;
+  }
+}

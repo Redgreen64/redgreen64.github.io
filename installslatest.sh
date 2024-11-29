@@ -1,4 +1,4 @@
-@echo off
+echo off
 echo Redgreen's Scratch Installer
 sleep(1)
 echo Checking If Node JS Is Installed...

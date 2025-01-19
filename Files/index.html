@@ -1,6 +1,33 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <h1>Nothing Here</h1>
-</head>
-</html>  
+    <head>
+        <title>Main Menu</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <body>
+                <div class="paddingthing">
+                  <img src="output.png" alt="Debian Logo" class="paddingthing"/>
+                  <span class="paddingthing">
+                    Main Menu
+                  </span>
+                </div>
+                <script>
+                  $('body').append('<div style="" id="loader"><div class="loader"></div></div>');
+        $(window).on('load', function(){
+          setTimeout(removeLoader, 0); //wait for page load PLUS two seconds.
+        });
+        function removeLoader(){
+            $( ".loader" ).fadeOut(500, function() {
+              // fadeOut complete. Remove the loading div
+              $( ".loader" ).remove(); //makes page more lightweight 
+          });  
+        }
+                </script>
+                <br>
+                <br>
+                <a href="http://192.168.1.206/">Fourms</a>
+                <br>
+                <a href="https://192.168.1.234/bb">Bytebeat</a>
+                <br>
+                <a href="https://192.168.1.206/chat">Chat</a>
+        </body>
+    </head>

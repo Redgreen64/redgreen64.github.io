@@ -1,7 +1,8 @@
-echo Redgreen's Scratch Installer
+echo Redgreen's Scratch Installer Bugfix 0001
 sleep(1)
 echo Checking If Node JS Is Installed...
 sudo apt install nodejs -y
+sudo apt install npm -y
 echo Checking If Git Is Installed
 sudo apt install git -y
 echo Installed!

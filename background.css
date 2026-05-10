@@ -42,8 +42,8 @@ h1 {
   text-align: center;
 }
 head {
+  font-family: 'VCR_OSD', monospace;
   color: rgba(88, 119, 146, 0.575);
-  font-family: "Chakra Petch", "Segoe UI", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-display: auto;

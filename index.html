@@ -17,6 +17,9 @@
         align-items: center;
         font-family: Arial, sans-serif;
         height: 30px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
       }
 
       .ticker-label {
@@ -64,13 +67,6 @@
     </style>
   </head>
   <body style="background-color:rgba(148, 165, 74, 0.541);">
-    <div class="ticker-container">
-      <div class="ticker-label">LATEST</div>
-      <div class="ticker-content">
-        <div class="ticker-text" id="ticker-text">Loading news...</div>
-      </div>
-    </div>
-
     <h1>Hello, There.</h1>
     <hr>
     <br>
@@ -80,6 +76,12 @@
     <code>
       curl -fsSL https://redgreen64.github.io/installer/install.sh | sh 
     </code>
+    <br><br>
+    <p>Install <span class="NONAME">FortunePy</span></p>
+    <code>
+      curl -fsSL https://raw.githubusercontent.com/Redgreen64/FortunePy/main/install.sh | sh
+    </code>
+    <hr>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -105,5 +107,12 @@
       // Load news when page loads
       window.addEventListener('DOMContentLoaded', loadNewsTicker);
     </script>
+
+    <div class="ticker-container">
+      <div class="ticker-label">LATEST</div>
+      <div class="ticker-content">
+        <div class="ticker-text" id="ticker-text">Loading news...</div>
+      </div>
+    </div>
   </body>
 </html>

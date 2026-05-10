@@ -1,6 +1,4 @@
 body {
-  background: linear-gradient(45deg,#6f00ff,#0077ff);
-  background-size: 120% 120%;
   animation: gradient-animation 20s ease infinite;
   text-align: center;
 }
@@ -45,7 +43,7 @@ h1 {
 
 head {
   font-family: 'VCR_OSD', monospace;
-  color: rgba(88, 119, 146, 0.575);
+  color: rgb(255, 255, 255);
   font-weight: 700;
   font-style: normal;
   font-display: auto;

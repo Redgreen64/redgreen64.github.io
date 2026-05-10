@@ -18,7 +18,7 @@
         font-family: Arial, sans-serif;
         height: 30px;
       }
-      
+
       .ticker-label {
         background-color: #cc0000;
         color: white;
@@ -28,13 +28,13 @@
         white-space: nowrap;
         flex-shrink: 0;
       }
-      
+
       .ticker-content {
         flex: 1;
         overflow: hidden;
         position: relative;
       }
-      
+
       .ticker-text {
         color: white;
         font-size: 14px;
@@ -43,11 +43,11 @@
         animation: scroll-left 30s linear infinite;
         display: inline-block;
       }
-      
+
       .ticker-content:hover .ticker-text {
         animation-play-state: paused;
       }
-      
+
       @keyframes scroll-left {
         0% {
           transform: translateX(100%);
@@ -56,7 +56,7 @@
           transform: translateX(-100%);
         }
       }
-      
+
       .ticker-separator {
         color: #cc0000;
         margin: 0 10px;
@@ -86,15 +86,14 @@
       // Fetch BBC News RSS feed
       async function loadNewsTicker() {
         try {
-          // Using a CORS proxy since BBC RSS might have CORS restrictions
-          const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=http://feeds.bbc.co.uk/news/rss.xml');
+          const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Ffeeds.bbci.co.uk%2Fnews%2Frss.xml');
           const data = await response.json();
-          
+
           if (data.items && data.items.length > 0) {
             // Get first 10 items and extract titles
             const newsItems = data.items.slice(0, 10).map(item => item.title);
             const tickerText = newsItems.join(' • ');
-            
+
             document.getElementById('ticker-text').textContent = tickerText;
           }
         } catch (error) {
@@ -102,7 +101,7 @@
           document.getElementById('ticker-text').textContent = 'Unable to load news feed. Please check back later.';
         }
       }
-      
+
       // Load news when page loads
       window.addEventListener('DOMContentLoaded', loadNewsTicker);
     </script>
